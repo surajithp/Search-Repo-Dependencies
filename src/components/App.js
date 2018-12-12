@@ -1,9 +1,13 @@
 import React from "react";
+import axios from "axios";
 import SearchBar from "./SearchBar";
 
 class App extends React.Component {
-  onReposearch = keyword => {
-    console.log("Hi");
+  state = { data: [] };
+  onReposearch = async keyword => {
+    const response = await axios.get(
+      `https://api.github.com/search/repositories?q=${keyword}+language:javascript&sort=stars&order=desc&per_page=20`
+    );
   };
   render() {
     return (

@@ -1,8 +1,9 @@
 import React from "react";
+import "./DisplayRepo.css";
 
 const DisplaySingleRepo = props => {
   return (
-    <div>
+    <div className="box margin">
       <p>{props.serialno}</p>
       <p>{props.full_name}</p>
       <p>Description: {props.description}</p>

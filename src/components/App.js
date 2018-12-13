@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import SearchBar from "./SearchBar";
 import DisplayRepos from "./DisplayRepos";
+import Pagination from "./Pagination";
 
 class App extends React.Component {
   state = { data: [] };
@@ -13,7 +14,7 @@ class App extends React.Component {
     this.setState({ data: reposdata });
   };
   render() {
-    console.log(this.state.data)
+    console.log(this.state.data);
     return (
       <div>
         <SearchBar onclick={this.onReposearch} />

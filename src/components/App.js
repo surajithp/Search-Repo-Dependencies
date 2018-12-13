@@ -30,7 +30,7 @@ class App extends React.Component {
       pagenumber: this.state.pagenumber - 1
     });
   };
-  pagnation = () => {
+  pagination = () => {
     if (this.state.pagenumber === 0) {
       return null;
     } else if (this.state.pagenumber === 1) {
@@ -55,12 +55,11 @@ class App extends React.Component {
     }
   };
   render() {
-    console.log(this.state.data);
     return (
       <div>
         <SearchBar onclick={this.onReposearch} />
         <DisplayRepos repositems={this.state.data} />
-        <div>{this.pagnation()}</div>
+        <div>{this.pagination()}</div>
       </div>
     );
   }

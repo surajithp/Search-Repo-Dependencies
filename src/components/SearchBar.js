@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css"
 
 class SearchBar extends React.Component {
   state = { searchkeyword: "" };
@@ -9,8 +10,8 @@ class SearchBar extends React.Component {
   };
   render() {
     return (
-      <div>
-        <form onSubmit={this.OnFormsubmit}>
+      <div className="button_box2">
+        <form className="form-wrapper-2 cf" onSubmit={this.OnFormsubmit}>
           <input
             type="text"
             placeholder="Search here"

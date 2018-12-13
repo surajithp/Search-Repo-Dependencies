@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <div>
         <SearchBar onclick={this.onReposearch} />
-        <DisplayRepos />
+        <DisplayRepos repositems={this.state.data}/>
       </div>
     );
   }

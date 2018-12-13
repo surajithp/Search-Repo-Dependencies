@@ -13,10 +13,11 @@ class App extends React.Component {
     this.setState({ data: reposdata });
   };
   render() {
+    console.log(this.state.data)
     return (
       <div>
         <SearchBar onclick={this.onReposearch} />
-        <DisplayRepos repositems={this.state.data}/>
+        <DisplayRepos repositems={this.state.data} />
       </div>
     );
   }

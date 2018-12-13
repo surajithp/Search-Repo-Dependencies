@@ -4,7 +4,11 @@ import App from "./components/App";
 
 class GithubRepoSearch extends React.Component {
   render() {
-    return <div><App/></div>;
+    return (
+      <div>
+        <App />
+      </div>
+    );
   }
 }
 
